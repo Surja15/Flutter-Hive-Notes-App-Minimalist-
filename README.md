@@ -1,3 +1,6 @@
+# Flutter-Hive-Notes-App-Minimalist-
+A minimalist notes app built on Flutter using Hive
+
 # notepadsss
 
 Welcome to my Minimalist Notes App! This project is made by Surja Sekhar Sengupta, its a word editor based on Flutter using Hive.
