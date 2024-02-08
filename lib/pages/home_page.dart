@@ -52,41 +52,50 @@ void deleteNote(Note note)
       backgroundColor: CupertinoColors.systemGroupedBackground,
       floatingActionButton: FloatingActionButton(onPressed: createNewNote,
       backgroundColor: Colors.grey,
-      child: Icon(Icons.add, color:Colors.yellow),
+      child: Icon(Icons.mode_edit, color: CupertinoColors.systemGroupedBackground,),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:  [
             //Heading
-        
-           Padding(
-                padding: const EdgeInsets.only(left: 25.0, top: 65),
-                child: RichText( // Change to RichText for styling
-                  text: TextSpan(
-                    style: DefaultTextStyle.of(context).style,
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Notes', // Separate the "Notes" part
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      
-                      TextSpan(
-                        text: '    by Surja', // Add "by Surja" in a different style
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.normal,
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+        Padding(
+  padding: const EdgeInsets.only(left: 25.0, top: 65),
+  child: DefaultTextStyle(
+    style: TextStyle(
+      // Specify the default text style here
+      fontSize: 32,
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),
+    child: RichText(
+      // Change to RichText for styling
+      text: TextSpan(
+        children: const <TextSpan>[
+          TextSpan(
+            text: 'Notes', 
+            style: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+          TextSpan(
+            text: '     by Surja', 
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.normal,
+              color: Colors.grey,
+              
+            ),
+          ),
+        ],
+      ),
+    ),
+  ),
+),
+
+
             //list of notes
             value.getAllNotes().length==0 ? 
             Padding(
